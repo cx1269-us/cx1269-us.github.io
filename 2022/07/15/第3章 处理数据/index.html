@@ -1,393 +1,627 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
-    
-    
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    
-    
-    
-        <link rel="shortcut icon" href="/icons/favicon.ico">
-    
-
-    
-    
-        
-<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
-
-    
-    
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/iconfont.css">
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="无糖#可乐">
     
     <title>
-          
-            技術博客
         
+        Vegetable dogの博客
     </title>
     
-    
-<meta name="generator" content="Hexo 5.4.2"></head>
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-GhostWhite mdui-theme-accent-LightSlateGray">
-  
-  <header class="mdui-appbar mdui-appbar-fixed">
-  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
-    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">技術博客</a>
-    <a href="/" class="header-subtitle mdui-typo-headline"></a>
-    <div class="mdui-toolbar-spacer"></div>
-    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
-  </div>
-</header>
+<link rel="stylesheet" href="/css/style.css">
 
-<div class="mdui-dialog" id="search">
-  
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
-    </div>
-    <div class="search-result" data-resource="/search.xml"></div>
-  
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.jpg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":false}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block_tools":{"enable":true,"style":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.8"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
 </div>
 
-  <aside id="sidebar" class="mdui-drawer">
-    <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
-    </div>
+
+<main class="page-container">
 
     
-    <div id="sidebar-tab1" class="mdui-p-a-1">
-        <div class="mdui-list">
-            
-                
-                <a href="/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-home"></i>
-                    </div>
-                    <div class="mdui-list-item-content">主页</div>
-                </a>
-            
-                
-                <a href="/tags/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-bookmark"></i>
-                    </div>
-                    <div class="mdui-list-item-content">标签</div>
-                </a>
-            
-                
-                <a href="/categories/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-folder"></i>
-                    </div>
-                    <div class="mdui-list-item-content">分类</div>
-                </a>
-            
-                
-                <a href="/archives/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-archive"></i>
-                    </div>
-                    <div class="mdui-list-item-content">归档</div>
-                </a>
-            
-                
-                <a href="/about/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-user"></i>
-                    </div>
-                    <div class="mdui-list-item-content">关于</div>
-                </a>
-            
-            <div class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-icon">
-                    <i class="iconfont icon-moon"></i>
-                </div>
-                <div class="mdui-list-item-content">夜晚模式</div>
-                <label class="mdui-switch" id="darkmode">
-                  <input type="checkbox" id="nightmode_switch"/>
-                  <i class="mdui-switch-icon"></i>
-                </label>
-            </div>           
-        </div>
-    </div>
 
-    
-    <div id="sidebar-tab2" class="mdui-p-a-1">
-        <div class="sidebar-overview">
-            <div class="sidebar-avatar">
-                
-                    <img src="/icons/avatar.gif"/>
-                
-            </div>
-            <div class="sidebar-author-name">litaobao</div>
-            <div class="sidebar-description"></div>
-        </div>
-        <div class="sidebar-links">
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
             
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Vegetable dogの博客
+            </a>
         </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: true}">
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-link"></i>
-                    </div>
-                    <div class="mdui-list-item-content">链接</div>
-                    <div class="mdui-collapse-item-arrow">
-                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
-                    </div>
-                </div>
-                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
                     
-                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
-                            Meadow说明文档
-                        </a>
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
-            </li>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
         </ul>
     </div>
 
-    <div class="mdui-divider"></div>
-    
-    
-</aside>
-  
-  <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
-  <header class="mdui-card-media">
-    
-    
-      <div class="post-header"> 
-  <a class="post-header-title" href="/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/"></a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2022-07-15
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      编辑于:&nbsp;2022-07-15
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;
-    </span>
-    
-      <span>
-        <span class="iconfont icon-eye"></span>
-        浏览:&nbsp;
-        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
-      </span>
-    
-  </div>
-</div>   
-    
+    <div class="window-mask"></div>
+
+</header>
 
 
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation"></span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">无糖#可乐</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-07-15 22:38:03</span>
+        <span class="mobile">2022-07-15 22:38</span>
+    </span>
+    
+    
 
     
     
-    <div class="mdui-card-menu">
     
-      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
-      <ul class="mdui-menu" id="share_menu">
-        <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=&url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/&via=litaobao" target="_blank" class="mdui-ripple">Share to Twitter</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/" target="_blank" class="mdui-ripple">Share to Facebook</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/" target="_blank" class="mdui-ripple">Share to Google+</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/&title=" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=技術博客&title=&summary=&pics=http://example.com/null&url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/" target="_blank" class="mdui-ripple">Share to QQ</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://example.com/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/&text=" target="_blank" class="mdui-ripple">Share to Telegram</a>
-        </li>
-      </ul>
     
-  </div>
-  </header>
-  
-  
-  
-  
-  
-  <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h1 id="第3章-处理数据"><a href="#第3章-处理数据" class="headerlink" title="第3章 处理数据"></a>第3章 处理数据</h1><h2 id="3-1-简单变量"><a href="#3-1-简单变量" class="headerlink" title="3.1 简单变量"></a>3.1 简单变量</h2><h3 id="3-1-1-变量名命名规则"><a href="#3-1-1-变量名命名规则" class="headerlink" title="3.1.1 变量名命名规则"></a>3.1.1 变量名命名规则</h3><ul>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="第3章-处理数据"><a href="#第3章-处理数据" class="headerlink" title="第3章 处理数据"></a>第3章 处理数据</h1><h2 id="3-1-简单变量"><a href="#3-1-简单变量" class="headerlink" title="3.1 简单变量"></a>3.1 简单变量</h2><h3 id="3-1-1-变量名命名规则"><a href="#3-1-1-变量名命名规则" class="headerlink" title="3.1.1 变量名命名规则"></a>3.1.1 变量名命名规则</h3><ul>
 <li>在名称中只能使用字母字符、数字和下划线(_)。</li>
 <li>名称的第一个字符不能是数字。</li>
 <li>区分大写字符与小写字符。</li>
 <li>不能将C++关键字用作名称。</li>
 </ul>
-<h3 id="3-1-2-整型char、short、int、long、long-long"><a href="#3-1-2-整型char、short、int、long、long-long" class="headerlink" title="3.1.2 整型char、short、int、long、long long"></a>3.1.2 整型char、short、int、long、long long</h3><p><img src="E:\Document\imgs\image-20220715222315615.png" alt="image-20220715222315615"></p>
+<h3 id="3-1-2-整型char、short、int、long、long-long"><a href="#3-1-2-整型char、short、int、long、long-long" class="headerlink" title="3.1.2 整型char、short、int、long、long long"></a>3.1.2 整型char、short、int、long、long long</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\image-20220715222315615.png"
+                      alt="image-20220715222315615"
+                ></p>
 <h3 id="3-1-3-运算符sizeof-头文件climits"><a href="#3-1-3-运算符sizeof-头文件climits" class="headerlink" title="3.1.3 运算符sizeof() + 头文件climits"></a>3.1.3 运算符sizeof() + 头文件climits</h3><h4 id="sizeof"><a href="#sizeof" class="headerlink" title="sizeof()"></a>sizeof()</h4><p>sizeof()返回字节数，括号里可以是<strong>类型名</strong>，也可以是<strong>变量名</strong>。</p>
-<p><img src="E:\Document\imgs\4c95e1abb8be44a389bd1032c9e73670-1657895055515.png" alt="在这里插入图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\4c95e1abb8be44a389bd1032c9e73670-1657895055515.png"
+                      alt="在这里插入图片描述"
+                ></p>
 <h4 id="头文件climits"><a href="#头文件climits" class="headerlink" title="头文件climits"></a>头文件climits</h4><p>头文件climits定义了符号常量来表示类型的限制。</p>
-<p><img src="E:\Document\imgs\7be86bc9326d46b6a441321b1773682e.png" alt="请添加图片描述"></p>
-<p><img src="E:\Document\imgs\ca29b75b8f764f7198b6343250fbcda2.png" alt="请添加图片描述"></p>
-<h4 id="初始化（C语言和C-）"><a href="#初始化（C语言和C-）" class="headerlink" title="初始化（C语言和C++）"></a>初始化（C语言和C++）<img src="E:\Document\imgs\f149751cd38d4541aac2b558341d073b.png" alt="请添加图片描述"></h4><h4 id="C-11初始化方式（不推荐）"><a href="#C-11初始化方式（不推荐）" class="headerlink" title="C++11初始化方式（不推荐）"></a>C++11初始化方式（不推荐）</h4><p><img src="E:\Document\imgs\8d65c8d1fa5042b18402c478759f03b3.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\7be86bc9326d46b6a441321b1773682e.png"
+                      alt="请添加图片描述"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\ca29b75b8f764f7198b6343250fbcda2.png"
+                      alt="请添加图片描述"
+                ></p>
+<h4 id="初始化（C语言和C-）"><a href="#初始化（C语言和C-）" class="headerlink" title="初始化（C语言和C++）"></a>初始化（C语言和C++）<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\f149751cd38d4541aac2b558341d073b.png"
+                      alt="请添加图片描述"
+                ></h4><h4 id="C-11初始化方式（不推荐）"><a href="#C-11初始化方式（不推荐）" class="headerlink" title="C++11初始化方式（不推荐）"></a>C++11初始化方式（不推荐）</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\8d65c8d1fa5042b18402c478759f03b3.png"
+                      alt="请添加图片描述"
+                ></p>
 <h3 id="3-1-4-无符号类型unsigned-预处理语句-define（类似宏定义）"><a href="#3-1-4-无符号类型unsigned-预处理语句-define（类似宏定义）" class="headerlink" title="3.1.4 无符号类型unsigned + 预处理语句#define（类似宏定义）"></a>3.1.4 无符号类型unsigned + 预处理语句#define（类似宏定义）</h3><p>只有<strong>当数值不会为负时才可以使用无符号类型</strong>，如人口、粒数等。<br>注意：只写一个unsigned就默认表示unsigned int。</p>
-<p><img src="E:\Document\imgs\07c7eb946c494d5f812c75c09891f226.png" alt="请添加图片描述"></p>
-<h3 id="3-1-5-数据类型选择"><a href="#3-1-5-数据类型选择" class="headerlink" title="3.1.5 数据类型选择"></a>3.1.5 数据类型选择</h3><p><img src="E:\Document\imgs\844f95c1446d494b945db709055a611e.png" alt="请添加图片描述"></p>
-<p><img src="E:\Document\imgs\38f6a3f867d141c09fcde0098c435447.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\07c7eb946c494d5f812c75c09891f226.png"
+                      alt="请添加图片描述"
+                ></p>
+<h3 id="3-1-5-数据类型选择"><a href="#3-1-5-数据类型选择" class="headerlink" title="3.1.5 数据类型选择"></a>3.1.5 数据类型选择</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\844f95c1446d494b945db709055a611e.png"
+                      alt="请添加图片描述"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\38f6a3f867d141c09fcde0098c435447.png"
+                      alt="请添加图片描述"
+                ></p>
 <h3 id="3-1-6-不同的进制数（二进制、八进制、十六进制）"><a href="#3-1-6-不同的进制数（二进制、八进制、十六进制）" class="headerlink" title="3.1.6 不同的进制数（二进制、八进制、十六进制）"></a>3.1.6 不同的进制数（二进制、八进制、十六进制）</h3><p>不管值是10、012还是0xA，最终都以二进制的形式存储在计算机中。</p>
 <h4 id="用cout输入不同进制（默认输出十进制）"><a href="#用cout输入不同进制（默认输出十进制）" class="headerlink" title="用cout输入不同进制（默认输出十进制）"></a>用cout输入不同进制（默认输出十进制）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//用cout输出不同进制：</span></span><br><span class="line">	<span class="type">int</span> m = <span class="number">26</span>;</span><br><span class="line">	cout &lt;&lt; dec &lt;&lt; <span class="string">&quot;26的十进制数是：&quot;</span> &lt;&lt; m &lt;&lt; endl;<span class="comment">//26</span></span><br><span class="line">	cout &lt;&lt; hex &lt;&lt; <span class="string">&quot;26的十六进制数是：&quot;</span> &lt;&lt; m &lt;&lt; endl;<span class="comment">//1a</span></span><br><span class="line">	cout &lt;&lt; oct &lt;&lt; <span class="string">&quot;26的八进制数是：&quot;</span> &lt;&lt; m &lt;&lt; endl;<span class="comment">//32</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;26的二进制数是：&quot;</span> &lt;&lt; <span class="built_in">bitset</span>&lt;<span class="built_in">sizeof</span>(<span class="type">int</span>) * <span class="number">2</span>&gt;(m) &lt;&lt; endl;<span class="comment">//00011010</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="3-1-7-C-如何确定常量的类型"><a href="#3-1-7-C-如何确定常量的类型" class="headerlink" title="3.1.7 C++如何确定常量的类型"></a>3.1.7 C++如何确定常量的类型</h3><p>后缀是l或L：long常量<br>后缀是u或U：unsigned int常量<br>后缀是ul或lu或LU或UL：unsigned long常量</p>
-<h3 id="3-1-8-char类型—C-转义字符列"><a href="#3-1-8-char类型—C-转义字符列" class="headerlink" title="3.1.8 char类型—C++转义字符列"></a>3.1.8 char类型—C++转义字符列</h3><h3 id="C-转义序列的编码表"><a href="#C-转义序列的编码表" class="headerlink" title="C++转义序列的编码表"></a>C++转义序列的编码表</h3><p><img src="E:\Document\imgs\dbc6dd0fdba149e182301e9147d9fd20.png" alt="请添加图片描述"></p>
-<h4 id="三种实现换行的代码"><a href="#三种实现换行的代码" class="headerlink" title="三种实现换行的代码"></a>三种实现换行的代码</h4><p><img src="E:\Document\imgs\9adb6b93782f425699c539afff07e9fa.png" alt="请添加图片描述"></p>
+<h3 id="3-1-8-char类型—C-转义字符列"><a href="#3-1-8-char类型—C-转义字符列" class="headerlink" title="3.1.8 char类型—C++转义字符列"></a>3.1.8 char类型—C++转义字符列</h3><h3 id="C-转义序列的编码表"><a href="#C-转义序列的编码表" class="headerlink" title="C++转义序列的编码表"></a>C++转义序列的编码表</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\dbc6dd0fdba149e182301e9147d9fd20.png"
+                      alt="请添加图片描述"
+                ></p>
+<h4 id="三种实现换行的代码"><a href="#三种实现换行的代码" class="headerlink" title="三种实现换行的代码"></a>三种实现换行的代码</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\9adb6b93782f425699c539afff07e9fa.png"
+                      alt="请添加图片描述"
+                ></p>
 <h4 id="signed-char-和-unsigned-char"><a href="#signed-char-和-unsigned-char" class="headerlink" title="signed char 和 unsigned char"></a>signed char 和 unsigned char</h4><p>char用作数值类型：<br>unsigned char：0<del>255<br>signed char：-128</del>127<br>char用作字符类型：有无符号都行。</p>
-<p><img src="E:\Document\imgs\afa992bf8276450db5ff3b4de7658770.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\afa992bf8276450db5ff3b4de7658770.png"
+                      alt="请添加图片描述"
+                ></p>
 <h3 id="3-1-9-bool类型"><a href="#3-1-9-bool类型" class="headerlink" title="3.1.9 bool类型"></a>3.1.9 bool类型</h3><p>bool flag = true;//真<br>flag = false;//假<br>bool flag1 = 10;//真<br>flag1 = -2;//假</p>
 <h2 id="3-2-const限定符—定义符号常量"><a href="#3-2-const限定符—定义符号常量" class="headerlink" title="3.2 const限定符—定义符号常量"></a>3.2 const限定符—定义符号常量</h2><p>用const定义符号常量，比#define要好；<br>用const创建符号常量时要同时进行初始化，<strong>const int m = 10;</strong> 这样m就不能再变了。</p>
-<p><img src="E:\Document\imgs\33fbaa29dcd34324a4fc4c65868a6a74.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\33fbaa29dcd34324a4fc4c65868a6a74.png"
+                      alt="请添加图片描述"
+                ></p>
 <h2 id="3-3-浮点数"><a href="#3-3-浮点数" class="headerlink" title="3.3 浮点数"></a>3.3 浮点数</h2><h3 id="3-3-1-书写方式"><a href="#3-3-1-书写方式" class="headerlink" title="3.3.1 书写方式"></a>3.3.1 书写方式</h3><p>第一种是常用的标准小数点表示法;</p>
-<p><img src="E:\Document\imgs\e993af1be3a543e1a97326ff1e55bfed.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\e993af1be3a543e1a97326ff1e55bfed.png"
+                      alt="请添加图片描述"
+                ></p>
 <p>第二种是E表示法：</p>
-<p><img src="E:\Document\imgs\beb9f67be0f74271b22ea22ee5fde03e.png" alt="请添加图片描述"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\beb9f67be0f74271b22ea22ee5fde03e.png"
+                      alt="请添加图片描述"
+                ></p>
 <h3 id="3-3-2-浮点数类型—float-和-double"><a href="#3-3-2-浮点数类型—float-和-double" class="headerlink" title="3.3.2 浮点数类型—float 和 double"></a>3.3.2 浮点数类型—float 和 double</h3><p>C++对于<strong>有效位数（即精确度）</strong>的要求是：<br>float至少32位；<br>double至少48位，且不少于float；<br>long double至少和double一样多。<br><strong>通常，float为32位（4字节），double为64位（8字节）</strong>。</p>
 <p>float的精度比double低，系统确保float至少有<strong>6位</strong>有效位，double至少有<strong>13位</strong>是精确的。</p>
 <p>这两段话一个说float的有效位数是32位，一个又说float至少有6位有效位，这是怎么回事呢？<br>答：两种说法都没错，第一段的32位是指二进制的位数，第二段的6位是指十进制的位数。</p>
-<h3 id="3-3-3-浮点常量"><a href="#3-3-3-浮点常量" class="headerlink" title="3.3.3 浮点常量"></a>3.3.3 浮点常量</h3><p><img src="E:\Document\imgs\3134ccae56e54b27a4fcd8115952173c.png" alt="请添加图片描述"></p>
+<h3 id="3-3-3-浮点常量"><a href="#3-3-3-浮点常量" class="headerlink" title="3.3.3 浮点常量"></a>3.3.3 浮点常量</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="E:\Document\imgs\3134ccae56e54b27a4fcd8115952173c.png"
+                      alt="请添加图片描述"
+                ></p>
 <h3 id="3-3-4-浮点数的优缺点"><a href="#3-3-4-浮点数的优缺点" class="headerlink" title="3.3.4 浮点数的优缺点"></a>3.3.4 浮点数的优缺点</h3><p>（代码见home/reus/Documents/C++_Primer_Plus/2#/6.cpp）<br>优点：①可以表示整数之间的值；②可以表示的范围更大。<br>缺点：运算速度慢，并且<strong>在运算过程中精度会降低</strong></p>
 
-  </div>
-  <!--文末结束语-->
-  
-    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
-  
-  <!--页脚广告-->
-  
-  <div class="mdui-divider"></div>
-  
-  <nav>
-    
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2022/07/16/c-primer-plus-03/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>c++ primer plus 03</span>
-      </a>
-    
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2022/07/11/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/">
-        <span>浮点数在内存中如何存储</span>
-        <i class="iconfont icon-angle-right"></i>
-      </a>
-    
-  </nav>
-</article>
-
-
-
-
-  <div class="toc-button"  style="z-index: 100;">
-    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
-    <ul class="mdui-menu" id="toc">
-      <li class="mdui-menu-item">
-        <a href="/2022/07/15/%E7%AC%AC3%E7%AB%A0%20%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/" id="toc-header" class="mdui-ripple">目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-number">1.</span> <span class="toc-text">第3章 处理数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E7%AE%80%E5%8D%95%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 简单变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E5%8F%98%E9%87%8F%E5%90%8D%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">1.1.1.</span> <span class="toc-text">3.1.1 变量名命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E6%95%B4%E5%9E%8Bchar%E3%80%81short%E3%80%81int%E3%80%81long%E3%80%81long-long"><span class="toc-number">1.1.2.</span> <span class="toc-text">3.1.2 整型char、short、int、long、long long</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E8%BF%90%E7%AE%97%E7%AC%A6sizeof-%E5%A4%B4%E6%96%87%E4%BB%B6climits"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.1.3 运算符sizeof() + 头文件climits</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sizeof"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">sizeof()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6climits"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">头文件climits</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88C%E8%AF%AD%E8%A8%80%E5%92%8CC-%EF%BC%89"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">初始化（C语言和C++）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-11%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E5%BC%8F%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">C++11初始化方式（不推荐）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E6%97%A0%E7%AC%A6%E5%8F%B7%E7%B1%BB%E5%9E%8Bunsigned-%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5-define%EF%BC%88%E7%B1%BB%E4%BC%BC%E5%AE%8F%E5%AE%9A%E4%B9%89%EF%BC%89"><span class="toc-number">1.1.4.</span> <span class="toc-text">3.1.4 无符号类型unsigned + 预处理语句#define（类似宏定义）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="toc-number">1.1.5.</span> <span class="toc-text">3.1.5 数据类型选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-6-%E4%B8%8D%E5%90%8C%E7%9A%84%E8%BF%9B%E5%88%B6%E6%95%B0%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E3%80%81%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%EF%BC%89"><span class="toc-number">1.1.6.</span> <span class="toc-text">3.1.6 不同的进制数（二进制、八进制、十六进制）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8cout%E8%BE%93%E5%85%A5%E4%B8%8D%E5%90%8C%E8%BF%9B%E5%88%B6%EF%BC%88%E9%BB%98%E8%AE%A4%E8%BE%93%E5%87%BA%E5%8D%81%E8%BF%9B%E5%88%B6%EF%BC%89"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">用cout输入不同进制（默认输出十进制）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-7-C-%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%B8%B8%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.7.</span> <span class="toc-text">3.1.7 C++如何确定常量的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-8-char%E7%B1%BB%E5%9E%8B%E2%80%94C-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%88%97"><span class="toc-number">1.1.8.</span> <span class="toc-text">3.1.8 char类型—C++转义字符列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97%E7%9A%84%E7%BC%96%E7%A0%81%E8%A1%A8"><span class="toc-number">1.1.9.</span> <span class="toc-text">C++转义序列的编码表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%8D%A2%E8%A1%8C%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.9.1.</span> <span class="toc-text">三种实现换行的代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#signed-char-%E5%92%8C-unsigned-char"><span class="toc-number">1.1.9.2.</span> <span class="toc-text">signed char 和 unsigned char</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-9-bool%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.10.</span> <span class="toc-text">3.1.9 bool类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-const%E9%99%90%E5%AE%9A%E7%AC%A6%E2%80%94%E5%AE%9A%E4%B9%89%E7%AC%A6%E5%8F%B7%E5%B8%B8%E9%87%8F"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 const限定符—定义符号常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">3.3 浮点数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-%E4%B9%A6%E5%86%99%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.3.1 书写方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%E2%80%94float-%E5%92%8C-double"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.3.2 浮点数类型—float 和 double</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-%E6%B5%AE%E7%82%B9%E5%B8%B8%E9%87%8F"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3.3 浮点常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-4-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.3.4 浮点数的优缺点</span></a></li></ol></li></ol></li></ol>
-      </li>
-    </ul>
-  </div>
-
-
-
-  </main>
-  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="mdui-container">
-    <div class="mdui-row">
-      
-      <span>
-        &copy; 2022 - 2022 
-        
-          <span style="color:#d9333f" class="iconfont icon-heart"></span>
-        
-        litaobao
-      </span>
-    </div>
-    <div class="mdui-row">
-      
-        <span>Theme: <a href="https://github.com/kb1000fx/hexo-theme-meadow" rel="noopener" target="_blank">Meadow</a></span>
-      
-    </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
         </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
-        </div>
-      
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/07/16/c-primer-plus-03/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">c++ primer plus 03</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/07/11/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">浮点数在内存中如何存储</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
- </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2022</span> -
+            
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">无糖#可乐</a>
+            
+        </div>
+        
+        <!-- <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
+            &nbsp;
+            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.8</a>
+        </div> -->
+        
+        
+    </div>
 </footer>
-  
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
-  
-  
 
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-up-right-and-down-left-from-center"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0-%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="nav-text">第3章 处理数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%AE%80%E5%8D%95%E5%8F%98%E9%87%8F"><span class="nav-text">3.1 简单变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E5%8F%98%E9%87%8F%E5%90%8D%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-text">3.1.1 变量名命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E6%95%B4%E5%9E%8Bchar%E3%80%81short%E3%80%81int%E3%80%81long%E3%80%81long-long"><span class="nav-text">3.1.2 整型char、short、int、long、long long</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-%E8%BF%90%E7%AE%97%E7%AC%A6sizeof-%E5%A4%B4%E6%96%87%E4%BB%B6climits"><span class="nav-text">3.1.3 运算符sizeof() + 头文件climits</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sizeof"><span class="nav-text">sizeof()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6climits"><span class="nav-text">头文件climits</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88C%E8%AF%AD%E8%A8%80%E5%92%8CC-%EF%BC%89"><span class="nav-text">初始化（C语言和C++）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-11%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E5%BC%8F%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-text">C++11初始化方式（不推荐）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-4-%E6%97%A0%E7%AC%A6%E5%8F%B7%E7%B1%BB%E5%9E%8Bunsigned-%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5-define%EF%BC%88%E7%B1%BB%E4%BC%BC%E5%AE%8F%E5%AE%9A%E4%B9%89%EF%BC%89"><span class="nav-text">3.1.4 无符号类型unsigned + 预处理语句#define（类似宏定义）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="nav-text">3.1.5 数据类型选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-6-%E4%B8%8D%E5%90%8C%E7%9A%84%E8%BF%9B%E5%88%B6%E6%95%B0%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E3%80%81%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%EF%BC%89"><span class="nav-text">3.1.6 不同的进制数（二进制、八进制、十六进制）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8cout%E8%BE%93%E5%85%A5%E4%B8%8D%E5%90%8C%E8%BF%9B%E5%88%B6%EF%BC%88%E9%BB%98%E8%AE%A4%E8%BE%93%E5%87%BA%E5%8D%81%E8%BF%9B%E5%88%B6%EF%BC%89"><span class="nav-text">用cout输入不同进制（默认输出十进制）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-7-C-%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%B8%B8%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">3.1.7 C++如何确定常量的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-8-char%E7%B1%BB%E5%9E%8B%E2%80%94C-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%88%97"><span class="nav-text">3.1.8 char类型—C++转义字符列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97%E7%9A%84%E7%BC%96%E7%A0%81%E8%A1%A8"><span class="nav-text">C++转义序列的编码表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%8D%A2%E8%A1%8C%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-text">三种实现换行的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#signed-char-%E5%92%8C-unsigned-char"><span class="nav-text">signed char 和 unsigned char</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-9-bool%E7%B1%BB%E5%9E%8B"><span class="nav-text">3.1.9 bool类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-const%E9%99%90%E5%AE%9A%E7%AC%A6%E2%80%94%E5%AE%9A%E4%B9%89%E7%AC%A6%E5%8F%B7%E5%B8%B8%E9%87%8F"><span class="nav-text">3.2 const限定符—定义符号常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-text">3.3 浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E4%B9%A6%E5%86%99%E6%96%B9%E5%BC%8F"><span class="nav-text">3.3.1 书写方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%E2%80%94float-%E5%92%8C-double"><span class="nav-text">3.3.2 浮点数类型—float 和 double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E6%B5%AE%E7%82%B9%E5%B8%B8%E9%87%8F"><span class="nav-text">3.3.3 浮点常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-text">3.3.4 浮点数的优缺点</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
 
 
 
 
     
-<script src="/js/mdui.min.v1.0.0.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 
 
-<script src="/js/meadow.js"></script>
+    
+<script src="/js/code-block-tools.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
 
 </body>
-</html >
+</html>
