@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title>test_my_site</title>
-    <link href="/2023/04/26/test-my-site/"/>
-    <url>/2023/04/26/test-my-site/</url>
+    <title>Title</title>
+    <link href="/2023/04/27/title/"/>
+    <url>/2023/04/27/title/</url>
     
     <content type="html"><![CDATA[]]></content>
     
     
+    <categories>
+      
+      <category>category Ctest</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>test</tag>
+      
+    </tags>
     
   </entry>
   
