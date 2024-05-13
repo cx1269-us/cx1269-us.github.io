@@ -30,13 +30,19 @@
   
   
   <entry>
-    <title>博途_定时器</title>
-    <link href="/2024/05/13/%E5%8D%9A%E9%80%94-%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
-    <url>/2024/05/13/%E5%8D%9A%E9%80%94-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
+    <title>博途_指令</title>
+    <link href="/2024/05/13/%E5%8D%9A%E9%80%94-%E4%B8%8A%E5%8D%87%E6%B2%BF/"/>
+    <url>/2024/05/13/%E5%8D%9A%E9%80%94-%E4%B8%8A%E5%8D%87%E6%B2%BF/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="PLC-指令"><a href="#PLC-指令" class="headerlink" title="PLC_指令"></a>PLC_指令</h1><h2 id="上升沿和下降沿"><a href="#上升沿和下降沿" class="headerlink" title="上升沿和下降沿"></a>上升沿和下降沿</h2><p>概 念:<br>1、正跳变触点指令(上升沿):从断开到接通，接通一个扫描周期。2、负跳变触点指令(下降沿):从接通到断开，接通一个扫描周期。S7-200 SMART CPU 支持在程序中合计(上升和下降)使用1024条边(参考SMART帮助)缘检测器指令。</p><p><img src="/../imgs/$%7Bfiilename%7D/s71200%E6%B2%BF%E6%8C%87%E4%BB%A4.png"></p><p>举例1:1台电机，直接启动</p><p><img src="/../imgs/$%7Bfiilename%7D/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240513232019.png"></p><p>举例2:两台电机，一用一备，当运行电机出现故障时，立刻切换为备用电机</p><p><img src="/../imgs/$%7Bfiilename%7D/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240513232227.png"></p><p>举例3:一个启动按钮，每按一次按钮，就启动一台电机，一共4台电机。<br>按下停止按钮，全部停止。</p><p><img src="/../imgs/$%7Bfiilename%7D/image-20240513233612436.png" alt="image-20240513233612436"></p><p><img src="/../imgs/$%7Bfiilename%7D/image-20240513233536646.png" alt="image-20240513233536646"></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>Port</tag>
+      
+    </tags>
     
   </entry>
   
