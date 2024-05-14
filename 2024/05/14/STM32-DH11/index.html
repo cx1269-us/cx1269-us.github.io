@@ -9,7 +9,7 @@
     
     <title>
         
-            ESP8266连接Onenet |
+            STM32_DH11 |
         
         学习笔记
     </title>
@@ -174,7 +174,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">ESP8266连接Onenet</span>
+                <span class="title-hover-animation">STM32_DH11</span>
             </div>
 
             
@@ -196,16 +196,38 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-05-13 22:14:37</span>
-        <span class="mobile">2024-05-13 22:14</span>
+        <span class="pc">2024-05-14 23:37:05</span>
+        <span class="mobile">2024-05-14 23:37</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-05-13 22:36:39</span>
+        <span class="pc">2024-05-14 23:42:19</span>
     </span>
     
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/STM32%EF%BC%8CDH11/">STM32，DH11</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -222,84 +244,61 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="1-下载固件"><a href="#1-下载固件" class="headerlink" title="1.下载固件"></a>1.下载固件</h2><p>如果要使用AT指令 和MQTT协议，需要注意固件版本。使用下图软件下载。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/../imgs/$%7Bfiilename%7D/%E4%B8%8B%E8%BD%BD%E4%BA%8B%E9%A1%B9-1715609858599-4-1715609863956-6-1715609869250-8.jpg"
-                      alt="下载事项"
-                ></p>
-<h2 id="2-设置onenet"><a href="#2-设置onenet" class="headerlink" title="2.设置onenet"></a>2.设置onenet</h2><p>按照流程创建项目，注意项目关键字，项目ID 等</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">设备名称：MQTT_TEST</span><br><span class="line">产品ID：HnL6N2nQG6</span><br><span class="line">Password：version=<span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>&amp;res=products%<span class="number">2F</span>HnL6N2nQG6%<span class="number">2F</span>devices%<span class="number">2F</span>MQTT_TEST&amp;et=<span class="number">1778589863</span>&amp;method=md5&amp;sign=<span class="number">7</span>mOkK9iq1%<span class="number">2F</span>2DNi1blr8Atw%<span class="number">3</span>D%<span class="number">3</span>D</span><br><span class="line">url:mqtts.heclouds.com</span><br><span class="line">端口号：<span class="number">1883</span></span><br><span class="line">订阅：$sys/HnL6N2nQG6/MQTT_TEST/thing/property/post/reply</span><br><span class="line">发布：$sys/HnL6N2nQG6/MQTT_TEST/thing/property/post</span><br><span class="line">设备密钥：T1NFcFpHWXVWMjRnOVBUN1hDMjBXV1Rxc21XeDJYT1U=</span><br><span class="line">acccess key:+dt1wc3nB7cX32f9M/<span class="number">8f</span>AeMTtX9Z7zMlS/V162Vj8z8=</span><br><span class="line">res:products/F1AVyfXw7I/devices/test</span><br><span class="line">et:<span class="number">1778589863</span></span><br><span class="line">    </span><br><span class="line">OneNet云平台：open.iot<span class="number">.10086</span>.cn</span><br><span class="line">时间戳：https:<span class="comment">//www.beijing-time.org/shijianchuo/</span></span><br><span class="line">OneNet文档中心：https:<span class="comment">//open.iot.10086.cn/doc/v5/develop/detail/639</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-使用XCOM软件进行设置"><a href="#3-使用XCOM软件进行设置" class="headerlink" title="3.使用XCOM软件进行设置"></a>3.使用XCOM软件进行设置</h2><ol>
-<li><p>AT  &#x2F;&#x2F;测试指令</p>
-</li>
-<li><p>AT+RST  &#x2F;&#x2F;复位指令</p>
-</li>
-<li><p>AT+CWMODE&#x3D;1  &#x2F;&#x2F;设置为station模式</p>
-</li>
-<li><p>AT+CWDHCP&#x3D;1,1  &#x2F;&#x2F;启动DHCP</p>
-</li>
-<li><p>AT+CWJAP&#x3D;”PCDN”,”1234567890”</p>
-</li>
-<li><p>AT+MQTTUSERCFG&#x3D;0,1,”MQTT_TEST”,”HnL6N2nQG6”,”version&#x3D;2018-10-31&amp;res&#x3D;products%2FHnL6N2nQG6%2Fdevices%2FMQTT_TEST&amp;et&#x3D;2999709119&amp;method&#x3D;md5&amp;sign&#x3D;QEYaWHgGA8K%2FpCKFL5pv0Q%3D%3D”,0,0,””</p>
-</li>
-<li><p>AT+MQTTCONN&#x3D;0,”mqtts.heclouds.com”,1883,1</p>
-</li>
-<li><p>AT+MQTTSUB&#x3D;0,”$sys&#x2F;HnL6N2nQG6&#x2F;MQTT_TEST&#x2F;thing&#x2F;property&#x2F;post&#x2F;reply”,1</p>
-</li>
-<li><p>AT+MQTTPUB&#x3D;0,”$sys&#x2F;HnL6N2nQG6&#x2F;MQTT_TEST&#x2F;thing&#x2F;property&#x2F;post”,”{&quot;id&quot;:&quot;123&quot;,&quot;params&quot;:{&quot;temp&quot;:{&quot;value&quot;:23.6}}}”,0,0</p>
-<h2 id="4-查看是否上传成功"><a href="#4-查看是否上传成功" class="headerlink" title="4.查看是否上传成功"></a>4.查看是否上传成功</h2></li>
+                <h1 id="DHT11传感器概述"><a href="#DHT11传感器概述" class="headerlink" title="DHT11传感器概述"></a>DHT11传感器概述</h1><h2 id="特点："><a href="#特点：" class="headerlink" title="特点："></a><strong>特点</strong>：</h2><ul>
+<li><strong>测量范围</strong>：湿度 20-80% RH, 温度 0-50°C</li>
+<li><strong>精确度</strong>：湿度 ±5% RH, 温度 ±2°C</li>
+<li><strong>供电电压</strong>：3.3V 或 5V</li>
+<li><strong>数字信号输出</strong>：单线串行通讯</li>
+</ul>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>DHT11输出的是数字信号。它使用单一的数据线（加上地线和电源线）进行通信。DHT11在数据线上输出一个特定的高低电平信号组合来代表湿度和温度的数据。</p>
+<h2 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h2><p>通常连接DHT11传感器需要三根线：</p>
+<ol>
+<li>VCC（+3.3V或+5V）</li>
+<li>GND（地线）</li>
+<li>DATA（数据线）</li>
 </ol>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/../imgs/$%7Bfiilename%7D/image-20240513223122465-1715610747195-10.png"
-                     
-                ></p>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>用到的软件：</p>
-<p>烧写固件：flash_download_tool_3.9.4</p>
-<p>固件：（1471）ESP8266-AT_MQTT-1M.bin</p>
-<p>串手工具：XCOM</p>
-<h2 id="后续-STM32F103采集温湿度和光照，上传到Onenet"><a href="#后续-STM32F103采集温湿度和光照，上传到Onenet" class="headerlink" title="后续-STM32F103采集温湿度和光照，上传到Onenet"></a>后续-STM32F103采集温湿度和光照，上传到Onenet</h2><p>l 基础功能：DHT11监测环境温度湿度，光敏电阻模块监测当前光照强度，并且将这些数据都显示在OLED屏幕上。</p>
-<p>l 拓展功能：通过蓝牙模块实现远程监测数据的功能，设置温度阈值当到达特定温度阈值时，电机打开进行降温操作，当温度低于阈值时，电机关闭。</p>
-<p>l 进阶功能：使用ADC多通道采样，同时采样MQ135数据和ADC数据，使用按键达到手动控制风扇的功能。</p>
+<p>对于STM32等微控制器，可以通过GPIO（通用输入输出）端口读取数据线上的数字信号。</p>
+<h2 id="编程与读取数据"><a href="#编程与读取数据" class="headerlink" title="编程与读取数据"></a>编程与读取数据</h2><ol>
+<li><strong>初始化GPIO</strong>: 配置数据线为输入，用于读取DHT11的数据。</li>
+<li><strong>启动信号</strong>: 微控制器需要先将数据线拉低至少18ms，然后拉高20-40μs以启动传感器。</li>
+<li><strong>响应信号</strong>: DHT11收到启动信号后会保持数据线低80μs作为响应，然后再拉高80μs。</li>
+<li><strong>数据传输</strong>: DHT11发送40位数据（湿度整数部分、湿度小数部分、温度整数部分、温度小数部分、校验和）。</li>
+</ol>
+<h2 id="示例代码（基于STM32）"><a href="#示例代码（基于STM32）" class="headerlink" title="示例代码（基于STM32）"></a>示例代码（基于STM32）</h2><p>这里是一个简单的使用示例，假设你已经有一个适用于STM32的DHT11库。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;DHT11.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    DHT11_Data_TypeDef DHT11_Data;</span><br><span class="line"></span><br><span class="line">    DHT11_Init(); <span class="comment">// 初始化GPIO和其他设置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (DHT11_Read(&amp;DHT11_Data) == SUCCESS) <span class="comment">// 读取温湿度值</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 使用DHT11_Data.temp_int, DHT11_Data.temp_deci</span></span><br><span class="line">            <span class="comment">// DHT11_Data.humi_int, DHT11_Data.humi_deci处理数据</span></span><br><span class="line">        &#125;</span><br><span class="line">        Delay_ms(<span class="number">1000</span>); <span class="comment">// DHT11推荐最小采样时间为1秒</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：实际编程时，你需要确保有适用于你的硬件平台的DHT11驱动库。这通常包括对时序的精确控制，可能需要使用定时器中断或精确的延时函数来实现。</p>
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul>
+<li><strong>数据手册</strong>: 查看DHT11的官方数据手册可以更深入地了解其工作原理和技术规格。</li>
+<li><strong>社区和教程</strong>: 许多在线教程和社区（如Arduino社区、STM32社区）中有关于如何使用DHT11的详细讲解和示例。</li>
+<li><strong>项目实践</strong>: 尝试将DHT11集成到一个实际的微控制器项目中，比如制作一个自动调节温湿度的系统。</li>
+</ul>
 
             </div>
 
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/STM32%EF%BC%8CDH11/">#STM32，DH11</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
                 <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/05/14/STM32-DH11/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">STM32_DH11</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
                     
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/05/13/%E6%A8%A1%E7%94%B5-%E4%B8%89%E7%BA%A7%E7%AE%A1/"
+                               href="/2024/05/13/ESP8266%E8%BF%9E%E6%8E%A5Onenet/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">模电-三级管</span>
+                                <span class="post-nav-title-item">ESP8266连接Onenet</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -318,7 +317,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%9B%BA%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">1.下载固件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%AE%BE%E7%BD%AEonenet"><span class="nav-number">2.</span> <span class="nav-text">2.设置onenet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8XCOM%E8%BD%AF%E4%BB%B6%E8%BF%9B%E8%A1%8C%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">3.使用XCOM软件进行设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F"><span class="nav-number">4.</span> <span class="nav-text">4.查看是否上传成功</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD-STM32F103%E9%87%87%E9%9B%86%E6%B8%A9%E6%B9%BF%E5%BA%A6%E5%92%8C%E5%85%89%E7%85%A7%EF%BC%8C%E4%B8%8A%E4%BC%A0%E5%88%B0Onenet"><span class="nav-number">5.</span> <span class="nav-text">后续-STM32F103采集温湿度和光照，上传到Onenet</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DHT11%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">DHT11传感器概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">连接方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.4.</span> <span class="nav-text">编程与读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%EF%BC%88%E5%9F%BA%E4%BA%8ESTM32%EF%BC%89"><span class="nav-number">1.5.</span> <span class="nav-text">示例代码（基于STM32）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">1.6.</span> <span class="nav-text">学习资源</span></a></li></ol></li></ol>
     </div>
 </div>
 
